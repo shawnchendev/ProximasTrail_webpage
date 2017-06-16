@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "eastcoasttrail-e13a4",
+    "staging": "eastcoasttraillanding"
+  }
+}
