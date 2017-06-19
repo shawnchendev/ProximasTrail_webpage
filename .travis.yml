@@ -1,7 +1,9 @@
 
 before_script:
   - npm install -g gulp-cli
-script: gulp
+script: 
+  - gulp
+  - npm install
 install:
   - npm install -g firebase-tools
 after_success:
