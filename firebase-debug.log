@@ -1,0 +1,36 @@
+[debug] [2017-06-19T18:28:24.013Z] ----------------------------------------------------------------------
+[debug] [2017-06-19T18:28:24.015Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-19T18:28:24.016Z] CLI Version:  3.9.1
+[debug] [2017-06-19T18:28:24.016Z] Platform:     darwin
+[debug] [2017-06-19T18:28:24.016Z] Node Version: v6.11.0
+[debug] [2017-06-19T18:28:24.016Z] Time:         Mon Jun 19 2017 15:58:24 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:24.016Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-19T18:28:24.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-19T18:28:24.028Z] > authorizing via signed-in user
+[debug] [2017-06-19T18:28:24.030Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-19T18:28:24.031Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/nyPKcqjOMOG6iYw0N9k_RmYMcbn4Luuw0eoSQ4vJ8-0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jun 19 2017 15:58:24 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:24.359Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-19T18:28:24.379Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/eastcoasttrail-e13a4  
+ Mon Jun 19 2017 15:58:24 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:24.938Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-19T18:28:24.940Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/eastcoasttrail-e13a4/tokens  
+ Mon Jun 19 2017 15:58:24 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:25.412Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/shawnchen/Desktop/proximasTrails'...
+[info] 
+[debug] [2017-06-19T18:28:25.417Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/eastcoasttrail-e13a4  
+ Mon Jun 19 2017 15:58:25 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:25.988Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-19T18:28:25.989Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/536830792467/clients/_:getWebAppConfig  
+ Mon Jun 19 2017 15:58:25 GMT-0230 (NDT)
+[debug] [2017-06-19T18:28:26.745Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
