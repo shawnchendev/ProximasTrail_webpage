@@ -294,13 +294,17 @@
   };
   firebase.initializeApp(config);
 
-    $.getJSON("http://jsonip.com/?callback=?", function (data) {
-        var id = hashCode(data.ip)
-        var ipRef = firebase.database().ref('visitor').child(id);
-        ipRef.set({
-        ip: data.ip,
-        });     
+  id =makeid()
+  var mycookies = readCookie("mycookies")
+  if(mycookies == null){
+    createCookie("mycookies", id, 30)
+  }else{
+    mycookies =readCookie("mycookies")
+    var visitorRef = firebase.database().ref('visitor').child(mycookies);
+    visitorRef.set({
+        id:mycookies
     });
+  }
 
   $('#signup').click(function(){
     var name = $('#usr').val()
