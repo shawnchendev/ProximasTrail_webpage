@@ -75,7 +75,7 @@
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1> Embrace your wanderlust.</h1>
-							<h2>Use our app to keep track of your adventures, compare with others and learn more about the trails you are hiking. <br><br></h2>
+							<h2>Use our app to keep track of your adventures, compare with others<br><br></h2>
                             <!--<button type="button" class="btn btn-outline btn-xl" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
                             <a href="" class="btn btn-outline btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Get Early Access</a>
                         </div>
@@ -101,21 +101,6 @@
         </div>
     </header>
 
-    <!--<section id="download" class="download bg-primary text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Discover what all the buzz is about!</h2>
-                    <p>Our app is available on any mobile device! Download now to get started!</p>
-                    <div class="badges">
-                        <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-                        <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <section id="features" class="features">
         <div class="container">
             <div class="row">
@@ -134,8 +119,9 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+        							 <img src="/img/Leaderboard.png" class="img-responsive" alt="" name="move">
                                     <img src="/img/Map.png" class="img-responsive" alt="" name="move">
-									 <img src="/img/Leaderboard.png" class="img-responsive" alt="" name="move">
+
 									  <img src="/img/Profile.png" class="img-responsive" alt="" name="move">
 									   <img src="/img/Trails.png" class="img-responsive" alt="" name="move">
 									</div>
@@ -257,9 +243,26 @@
         <input type="text" class="form-control input-sm" id="email">
 		</div>
         <span id="thankyou"></span>
-	    <button type="button" class="btn btn-default" id ="signup">Signup</button>
+	    <button type="button" class="btn btn-default" id ="signup" data-dismiss="modal" data-toggle="modal" data-target="#tyModal">Signup</button>
 
         </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+   <div class="modal fade" id="tyModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content text-primary">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-primary">Thank You </h4>
+        </div>
+        <div class="modal-body">
+            <p>Thank you, we will notify you when the app goes live</p>
         </div>
       </div>
       
@@ -294,10 +297,15 @@
   };
   firebase.initializeApp(config);
 
-  id =makeid()
+  id = makeid()
   var mycookies = readCookie("mycookies")
   if(mycookies == null){
     createCookie("mycookies", id, 30)
+    mycookies =readCookie("mycookies")
+    var visitorRef = firebase.database().ref('visitor').child(mycookies);
+    visitorRef.set({
+        id:mycookies
+    });
   }else{
     mycookies =readCookie("mycookies")
     var visitorRef = firebase.database().ref('visitor').child(mycookies);
@@ -315,9 +323,7 @@
     username: name,
     email: email,
   });  
-  $('#usr').val('') 
-  $("#email").val('')  
-  $("#thankyou").append("Thank you, we will notify you when the app goes live<br><br>")
+
     });
 
 
